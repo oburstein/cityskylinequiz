@@ -1,0 +1,62 @@
+[
+  {
+    "image": "/images/nyc.jpg",
+    "correct": "New York City",
+    "country": "United States",
+    "difficulty": "easy"
+  },
+  {
+    "image": "/images/london.jpg",
+    "correct": "London",
+    "country": "United Kingdom",
+    "difficulty": "easy"
+  },
+  {
+    "image": "/images/paris.jpg",
+    "correct": "Paris",
+    "country": "France",
+    "difficulty": "easy"
+  },
+  {
+    "image": "/images/tokyo.jpg",
+    "correct": "Tokyo",
+    "country": "Japan",
+    "difficulty": "easy"
+  },
+  {
+    "image": "/images/dubai.jpg",
+    "correct": "Dubai",
+    "country": "United Arab Emirates",
+    "difficulty": "easy"
+  },
+  {
+    "image": "/images/singapore.jpg",
+    "correct": "Singapore",
+    "country": "Singapore",
+    "difficulty": "easy"
+  },
+  {
+    "image": "/images/hongkong.jpg",
+    "correct": "Hong Kong",
+    "country": "China",
+    "difficulty": "easy"
+  },
+  {
+    "image": "/images/sydney.jpg",
+    "correct": "Sydney",
+    "country": "Australia",
+    "difficulty": "easy"
+  },
+  {
+    "image": "/images/rio.jpg",
+    "correct": "Rio de Janeiro",
+    "country": "Brazil",
+    "difficulty": "easy"
+  },
+  {
+    "image": "/images/toronto.jpg",
+    "correct": "Toronto",
+    "country": "Canada",
+    "difficulty": "easy"
+  }
+]

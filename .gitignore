@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+
+# System files
+.DS_Store
+
+# Local environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor and tooling junk
+.vscode/
+.idea/
+*.log
+*.swp
+
+# Vercel local config (optional, if using Vercel CLI)
+.vercel/

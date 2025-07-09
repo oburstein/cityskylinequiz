@@ -1,0 +1,62 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Manhattan_from_the_air.jpg",
+    "correct": "New York City",
+    "country": "United States",
+    "difficulty": "easy"
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/London_Skyline_%2828847582250%29.jpg",
+    "correct": "London",
+    "country": "United Kingdom",
+    "difficulty": "easy"
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg",
+    "correct": "Paris",
+    "country": "France",
+    "difficulty": "easy"
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Tokyo_Tower_and_around_Skyscrapers.jpg",
+    "correct": "Tokyo",
+    "country": "Japan",
+    "difficulty": "easy"
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Dubai_Skyline_2021.jpg",
+    "correct": "Dubai",
+    "country": "United Arab Emirates",
+    "difficulty": "easy"
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Singapore_skyline.jpg",
+    "correct": "Singapore",
+    "country": "Singapore",
+    "difficulty": "easy"
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Hong_Kong_Skyline_Rainy.jpg",
+    "correct": "Hong Kong",
+    "country": "China",
+    "difficulty": "easy"
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Sydney_Opera_House_Sunset.jpg",
+    "correct": "Sydney",
+    "country": "Australia",
+    "difficulty": "easy"
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/Panorama_-_Rio_de_Janeiro%2C_Brazil.jpg",
+    "correct": "Rio de Janeiro",
+    "country": "Brazil",
+    "difficulty": "easy"
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/57/Toronto_-_ON_-_Toronto_Skyline6.jpg",
+    "correct": "Toronto",
+    "country": "Canada",
+    "difficulty": "easy"
+  }
+]
