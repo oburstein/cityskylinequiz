@@ -1,13 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import cityImageBank from './local_city_image_bank.json';
+import React, { useState } from 'react';
+import rawCityImageBank from './local_city_image_bank.json';
+
+interface CityImage {
+  image: string;
+  correct: string;
+  country: string;
+  difficulty: string;
+}
+
+interface Question {
+  image: string;
+  correct: string;
+  options: string[];
+}
+
+interface PlayerAnswer {
+  question: number;
+  selected: string;
+  correct: string;
+  isCorrect: boolean;
+}
+
+const cityImageBank: CityImage[] = rawCityImageBank as CityImage[];
 
 const CityQuizGame = () => {
-  const [gameState, setGameState] = useState('welcome'); // 'welcome', 'playing', 'results'
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [score, setScore] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [showFeedback, setShowFeedback] = useState(false);
-  const [playerAnswers, setPlayerAnswers] = useState([]);
+  const [gameState, setGameState] = useState<'welcome' | 'playing' | 'results'>('welcome');
+  const [currentQuestion, setCurrentQuestion] = useState<number>(0);
+  const [score, setScore] = useState<number>(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [showFeedback, setShowFeedback] = useState<boolean>(false);
+  const [playerAnswers, setPlayerAnswers] = useState<PlayerAnswer[]>([]);
 
   // Large bank of city names for wrong answers
   const cityNameBank = [
@@ -21,7 +43,7 @@ const CityQuizGame = () => {
   ];
 
   // Shuffle function
-  const shuffleArray = (array) => {
+  const shuffleArray = <T,>(array: T[]): T[] => {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -31,7 +53,7 @@ const CityQuizGame = () => {
   };
 
   // Generate random questions
-  const generateQuestions = () => {
+  const generateQuestions = (): Question[] => {
     const shuffledImages = shuffleArray(cityImageBank);
     const selectedImages = shuffledImages.slice(0, 10);
     
@@ -51,7 +73,7 @@ const CityQuizGame = () => {
     });
   };
 
-  const [questions, setQuestions] = useState([]);
+  const [questions, setQuestions] = useState<Question[]>([]);
 
   const startGame = () => {
     const newQuestions = generateQuestions();
@@ -64,7 +86,7 @@ const CityQuizGame = () => {
     setShowFeedback(false);
   };
 
-  const handleAnswerSelect = (answer) => {
+  const handleAnswerSelect = (answer: string) => {
     if (selectedAnswer || showFeedback) return;
     
     setSelectedAnswer(answer);
@@ -94,7 +116,7 @@ const CityQuizGame = () => {
     }, 1500);
   };
 
-  const getButtonStyle = (option) => {
+  const getButtonStyle = (option: string) => {
     if (!showFeedback) {
       return "bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-2 border-slate-600 hover:border-slate-500 text-white shadow-lg hover:shadow-slate-500/25 transform hover:scale-105 hover:-translate-y-1";
     }
