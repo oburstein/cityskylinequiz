@@ -170,13 +170,13 @@ const CityQuizGame = () => {
 
   if (gameState === 'playing' && questions.length > 0) {
     const progress = ((currentQuestion + 1) / questions.length) * 100;
-    
+
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden border border-slate-700/50">
+      <div className="h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
+        <div className="max-w-5xl mx-auto h-full flex flex-col">
+          <div className="bg-slate-800/50 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden border border-slate-700/50 flex flex-col flex-1">
             {/* Header with progress */}
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 relative overflow-hidden">
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-4 sm:p-6 relative overflow-hidden flex-shrink-0">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
               <div className="relative z-10 flex justify-between items-center text-white">
                 <div>
@@ -200,32 +200,32 @@ const CityQuizGame = () => {
               </div>
             </div>
             
-            <div className="p-8">
+            <div className="p-4 sm:p-8 flex flex-col flex-1 justify-between">
               {/* Image container with enhanced styling */}
-              <div className="relative mb-8 group">
+              <div className="relative mb-4 sm:mb-8 group h-[30vh] sm:h-[40vh] md:h-80">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                <img 
-                  src={questions[currentQuestion].image} 
+                <img
+                  src={questions[currentQuestion].image}
                   alt="City skyline"
-                  className="relative w-full h-80 object-cover rounded-3xl shadow-2xl border-4 border-white/10"
+                  className="relative w-full h-full object-cover rounded-3xl shadow-2xl border-4 border-white/10"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
               </div>
               
-              <h3 className="text-3xl font-bold text-center mb-8 text-white">
+              <h3 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8 text-white">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                   Which city is this?
                 </span>
               </h3>
               
               {/* Answer buttons with enhanced styling */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 flex-shrink-0">
                 {questions[currentQuestion].options.map((option, index) => (
                   <button
                     key={index}
                     onClick={() => handleAnswerSelect(option)}
                     disabled={showFeedback}
-                    className={`p-6 rounded-2xl font-bold text-lg transition-all duration-300 ${getButtonStyle(option)} ${
+                    className={`p-4 sm:p-6 rounded-2xl font-bold text-lg transition-all duration-300 ${getButtonStyle(option)} ${
                       showFeedback ? 'cursor-not-allowed' : 'cursor-pointer'
                     }`}
                   >
@@ -236,7 +236,7 @@ const CityQuizGame = () => {
               
               {/* Feedback with enhanced styling */}
               {showFeedback && (
-                <div className="mt-8 text-center">
+                <div className="mt-4 sm:mt-8 text-center">
                   <div className={`inline-flex items-center px-6 py-3 rounded-2xl text-xl font-bold ${
                     selectedAnswer === questions[currentQuestion].correct 
                       ? 'bg-gradient-to-r from-emerald-500 to-green-500 text-white shadow-lg shadow-emerald-500/50' 
@@ -276,7 +276,7 @@ const CityQuizGame = () => {
     const result = getResultMessage();
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 p-4 relative overflow-hidden">
+      <div className="h-full bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 p-4 relative overflow-hidden">
         {/* Animated celebration background */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
